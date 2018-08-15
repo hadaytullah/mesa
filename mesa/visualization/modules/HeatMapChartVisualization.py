@@ -10,7 +10,7 @@ import json
 from mesa.visualization.ModularVisualization import VisualizationElement
 
 
-class ChartModule(VisualizationElement):
+class HeatMapChartModule(VisualizationElement):
     """ Each chart can visualize one or more model-level series as lines
      with the data value on the Y axis and the step number as the X axis.
 
@@ -31,7 +31,7 @@ class ChartModule(VisualizationElement):
 
 
     Example:
-        schelling_chart = ChartModule([{"Label": "happy", "Color": "Black"}],
+        schelling_chart = HeatMapChartModule([{"Label": "happy", "Color": "Black"}],
                                       data_collector_name="datacollector")
 
     TODO:
@@ -42,8 +42,9 @@ class ChartModule(VisualizationElement):
         the same way that "Color" is currently.
 
     """
-    package_includes = ["Chart.min.js", "ChartModule.js"]
-    #package_includes = ["Chart.HeatMap.S.js", "ChartModule.js"]
+    #package_includes = ["Chart.min.js", "Chart.HeatMap.S.js","HeatMapChartModule.js"]
+    package_includes = ["Chart.HeatMap.S.js","HeatMapChartModule.js"]
+
 
     def __init__(self, series, canvas_height=200, canvas_width=500,
                  data_collector_name="datacollector"):
@@ -64,7 +65,7 @@ class ChartModule(VisualizationElement):
         self.data_collector_name = data_collector_name
 
         series_json = json.dumps(self.series)
-        new_element = "new ChartModule({}, {},  {})"
+        new_element = "new HeatMapChartModule({}, {},  {})"
         new_element = new_element.format(series_json, canvas_width,
                                          canvas_height)
         self.js_code = "elements.push(" + new_element + ");"

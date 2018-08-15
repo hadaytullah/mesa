@@ -298,6 +298,7 @@ var GridVisualization = function(width, height, gridWidth, gridHeight, context) 
         this.drawGridLines = function() {
                 context.beginPath();
                 context.strokeStyle = "#eee";
+                //context.strokeStyle = "#1807A2";
                 maxX = cellWidth * gridWidth;
                 maxY = cellHeight * gridHeight;
 
