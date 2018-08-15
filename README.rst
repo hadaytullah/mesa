@@ -75,3 +75,15 @@ If you would like to add a feature, please reach out via `ticket`_ or the `dev e
 .. _`dev email list` : https://groups.google.com/forum/#!forum/projectmesa-dev
 .. _`Contributors guide` : https://github.com/projectmesa/mesa/blob/master/CONTRIBUTING.rst
 .. _`Github` : https://github.com/projectmesa/mesa/
+
+Installing from the soruce
+--------------------------
+.. code-block:: bash
+    download or git clone <git-url>
+    
+go inside your mesa folder
+
+.. code-block:: bash
+    pip install -e .
+
+You can change the source code and the effect will be immediate.
