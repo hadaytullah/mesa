@@ -46,7 +46,7 @@ class HeatMapChartModule(VisualizationElement):
     package_includes = ["Chart.HeatMap.S.js","HeatMapChartModule.js"]
 
 
-    def __init__(self, series, canvas_height=200, canvas_width=500,
+    def __init__(self, series, canvas_height=2500, canvas_width=2500,
                  data_collector_name="datacollector"):
         """
         Create a new line chart visualization.
